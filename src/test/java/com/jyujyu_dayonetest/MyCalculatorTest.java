@@ -3,11 +3,13 @@ package com.jyujyu_dayonetest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class MyCalculatorTest {
 
     @Test
+    @DisplayName("calculator add test")
     public void addTest() throws Exception {
         // given
         MyCalculator myCalculator = new MyCalculator();
@@ -20,6 +22,7 @@ class MyCalculatorTest {
     }
 
     @Test
+    @DisplayName("calculator subtract test")
     public void minusTest() throws Exception {
         // given
         MyCalculator myCalculator = new MyCalculator(10.0);
@@ -32,6 +35,7 @@ class MyCalculatorTest {
     }
 
     @Test
+    @DisplayName("calculator multiply test")
     public void multiplyTest() throws Exception {
         // given
         MyCalculator myCalculator = new MyCalculator(2.0);

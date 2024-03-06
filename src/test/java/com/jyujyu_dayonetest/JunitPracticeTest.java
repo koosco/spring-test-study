@@ -11,12 +11,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 public class JunitPracticeTest {
 
     @Test
-    public void assertEqualsTest() throws Exception {
+    @DisplayName("assert equal test")
+    public void assert_equals_test() throws Exception {
         // given
         String expect = "Something";
         String actual = "Something";
@@ -26,6 +31,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert not equal test")
     public void assertNotEqualsTest() throws Exception {
         // given
         String expect = "Something";
@@ -35,6 +41,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert true test")
     public void assertTrueTest() throws Exception {
         // given
         Integer a = 10;
@@ -44,6 +51,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert false test")
     public void assertFalseTest() throws Exception {
         // given
         Integer a = 10;
@@ -53,6 +61,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert throw test")
     public void assertThrowsTest() throws Exception {
         // given & when & then
         assertThrows(RuntimeException.class, () -> {
@@ -61,6 +70,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert not null test")
     public void assertNotNullTest() throws Exception {
         // given
         String value = "Hello";
@@ -69,6 +79,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert null test")
     public void assertNullTest() throws Exception {
         // given
         String value = null;
@@ -77,6 +88,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert iterable test")
     public void assertIterableEquals() throws Exception {
         // given
         List<Integer> list1 = List.of(1, 2);
@@ -86,6 +98,7 @@ public class JunitPracticeTest {
     }
 
     @Test
+    @DisplayName("assert all test")
     public void assertAllTest() throws Exception {
         // given
         String expect = "Something";
