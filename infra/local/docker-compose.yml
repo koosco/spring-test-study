@@ -21,3 +21,5 @@ services:
     volumes:
       - ../../db/flyway.conf:/flyway/conf/flyway.conf
       - ../../db/migration:/flyway/sql
+    depends_on:
+      - local-db
